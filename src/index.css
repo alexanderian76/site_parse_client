@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 .25rem rgba(26, 152, 4, 0.284);
+  border-color: green;
+}
+.form-control {
+  border-color: green;
+}
+
+li {
+  list-style-type: none; /* Прячем исходные маркеры */
+ }
+ li:before {
+  color: rgb(0, 102, 22); /* Цвет маркера */
+  content: '\2022'; /* Сам маркер */
+  font-weight: bold;
+  padding-right: 10px; /* Расстояние от маркера до текста */
+ }
