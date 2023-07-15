@@ -37,7 +37,7 @@ function NavBarComp() {
     }, [])
     return(
         <Navbar ref={ref => {height.current = ref;}} fixed="top" expand='md' bg="dark" variant="dark">
-            <Container style={{marginLeft: '20%'}}>
+            <div style={{marginLeft: '20%', display: 'flex', width: '100%'}}>
                 <Navbar.Brand onClick={() => navigate(MAIN_ROUTE)}>
                 <img src={leafLogo} width="25" height="25" alt="Leaf logo"/></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav"/>
@@ -51,16 +51,17 @@ function NavBarComp() {
                 <Nav.Link active={location.pathname === '/examples' || location.pathname === '/examples/'}  onClick={() => navigate(EXAMPLES_ROUTE)} >Примеры парсинга</Nav.Link>
                 {user.Auth ? <Nav.Link active={location.pathname === '/profile' || location.pathname === '/profile/'} onClick={() => navigate(PROFILE_ROUTE)} >Мои задачи</Nav.Link> : ""}
                 </Nav>
-                <Nav>
+                <Nav className="justify-content-end" style={{marginRight: 10}}>
                     <Navbar.Text>
                         <a style={{marginRight: 10, color: '#cccc'}}>Напишите нам: </a>
                         <ButtonMailto label="info@leaf-studio.ru" mailto="mailto:info@leaf-studio.ru"/>
                     </Navbar.Text>
+                    {!user.Auth ? <Nav.Link style={{color: "white", marginLeft: 15}} className="btn btn-success" onClick={() => navigate(LOGIN_ROUTE)}>Войти</Nav.Link> : ""}
                 </Nav>
-                {!user.Auth ? <Nav.Link style={{color: "white", marginLeft: 15}} className="btn btn-success" onClick={() => navigate(LOGIN_ROUTE)}>Войти</Nav.Link> : ""}
+                
                 </Navbar.Collapse>
                 
-</Container>
+</div>
         </Navbar>
     )
 }

@@ -51,7 +51,7 @@ function DevelopComp() {
             //  border: '1px solid',
             //   borderColor: "#25b831",
             // height: container.current.offsetHeight == null ? 0 : container.current.offsetHeight - navbarHeight.height ,
-                width: '100%',
+                width: window.innerWidth,
                 textAlign: "center",
             //  paddingLeft: container.current.offsetWidth == null ? 0 : container.current.offsetWidth/ 10,
             // paddingRight: container.current.offsetWidth == null ? 0 : container.current.offsetWidth / 10,
@@ -66,7 +66,7 @@ function DevelopComp() {
     <meta name="keywords" content="заказать сайт web-application web-приложение"/>
         <header style={{ 
             fontSize: 25,
-            width: '100%',
+            width: window.innerWidth,
             paddingBottom: container.current.offsetHeight == null ? 0 : container.current.offsetHeight/ 40,
             textAlign: "center",
             backgroundColor: "#22112e",

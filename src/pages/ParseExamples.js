@@ -1,7 +1,9 @@
 import { observer } from "mobx-react-lite";
 import React, { useContext, useRef } from "react";
 import { Context } from "..";
+import dns from "../assets/preview-logo-dns.png"
 import { getExample } from "../utils/httpMethods";
+
 
 function ParseExamplesComp() {
     const examplesArray = [{description : 'dns parse', href: "ссылка"}]
@@ -12,12 +14,14 @@ function ParseExamplesComp() {
         <table style={{ width: 280 }}><tbody><tr><th style={{ textAlign: 'center' }}></th><th style={{ textAlign: 'center' }}></th></tr>{examplesArray.map((d, i) => <tr key={i}>
                     <td id={d.description}
                         style={{ color: 'blueviolet', padding: 5, paddingLeft: 0, opacity: 0.8 }}>
+                            
                         <div
                             style={{textAlign: "left",  width: window.innerWidth / 2.1, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: "nowrap", color: 'black', borderColor: '#3b4cff', marginLeft: 5 }}
-                            className="btn "
+                            //className="btn "
                             //style={{cursor: 'pointer', color: 'blueviolet', backgroundColor: 'lightgrey', padding: 5, borderRadius: 5}}
                             onClick={() => { }}
                         >
+                            <img src={dns} alt="Логотип DNS" />
                             {d.description}
                         </div>
                     </td>

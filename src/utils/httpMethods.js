@@ -31,10 +31,18 @@ export const registration = async (login, password) => {
 
         }).then(response => {
             console.log(response)
-            localStorage.setItem('token', response.data.token)
-
+            if (response.status == 200)
+                response.text().then(txt => {
+                    console.log(txt)
+                    localStorage.setItem('login', login)
+                    localStorage.setItem('token', txt)
+                    console.log(jwt_decode(txt))
+                    resolve(jwt_decode(txt))
+                })
+            else
+                alert("Такой пользователь уже есть")
             //return jwt_decode(data.token)
-            resolve(jwt_decode(response.data))
+            //resolve(jwt_decode(response.data))
         })
     })
 
@@ -78,6 +86,7 @@ export const getTasks = async () => {
     }
     catch(e) {
         localStorage.setItem('token', "")
+        return []
     }
     return new Promise(function (resolve, reject) {
         fetch('http://localhost:5035/getTasks', {
@@ -91,10 +100,11 @@ export const getTasks = async () => {
         }).then((response) => {
             console.log(response)
             if (response.status == 401) {
+
                 localStorage.setItem('token', "")
                 resolve()
             }
-                
+                else
 
             response.text().then(txt => {
                 console.log(JSON.parse(txt))
