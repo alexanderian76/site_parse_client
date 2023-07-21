@@ -77,9 +77,9 @@ function MainComp(props) {
             //  paddingBottom: container.current.offsetHeight == null ? 0 : container.current.offsetHeight/ 12
         }}>
             <div>Аутсорс разработка и парсинг данных</div>
-            Создадим с нуля по вашему тз или доработаем уже существующие приложения
+            Создадим или доработаем уже существующие приложения
             <div>Парсим данные в любом удобном для вас формате</div>
-            <img alt="парсинг, аутсорс разработка" src={handpic} style={{marginTop: 30, height: window.innerHeight/3 < 400 ? 400 : window.innerHeight/3,width: '100%',  objectFit: 'contain'}}/>
+            <img alt="Парсинг, аутсорс разработка" src={handpic} style={{marginTop: 30, height: window.innerHeight/3 < 400 ? 400 : window.innerHeight/3,width: '100%',  objectFit: 'contain'}}/>
         </header>
         <meta name="description" content="создать web-приложение, спарсить данныые"/>
     <meta name="keywords" content="заказать сайт web-application web-приложение"/>

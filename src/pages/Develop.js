@@ -10,13 +10,14 @@ import techpic from '../assets/techpic.png'
 function DevelopComp() {
   const {navbarHeight} = useContext(Context)
   const container = useRef('')
-  const currentWidth = window.innerWidth < 900 ? '100%' : 900
+  
 
-  const [state, setState] = useState({winWidth: 0})
-
+  const [state, setState] = useState({winWidth: window.innerWidth})
+  const [currentWidth, setCurrentWidth] = useState(window.innerWidth < 900 ? '100%' : 900) 
   function onResize() {
     // console.log(winWidth)
        setState({winWidth: window.innerWidth})
+       setCurrentWidth(window.innerWidth < 900 ? '100%' : 900)
   }
 
   useEffect(() => {
@@ -51,7 +52,7 @@ function DevelopComp() {
             //  border: '1px solid',
             //   borderColor: "#25b831",
             // height: container.current.offsetHeight == null ? 0 : container.current.offsetHeight - navbarHeight.height ,
-                width: window.innerWidth,
+                width: state.winWidth,
                 textAlign: "center",
             //  paddingLeft: container.current.offsetWidth == null ? 0 : container.current.offsetWidth/ 10,
             // paddingRight: container.current.offsetWidth == null ? 0 : container.current.offsetWidth / 10,
@@ -66,7 +67,7 @@ function DevelopComp() {
     <meta name="keywords" content="заказать сайт web-application web-приложение"/>
         <header style={{ 
             fontSize: 25,
-            width: window.innerWidth,
+            width: state.winWidth,
             paddingBottom: container.current.offsetHeight == null ? 0 : container.current.offsetHeight/ 40,
             textAlign: "center",
             backgroundColor: "#22112e",
