@@ -1,13 +1,13 @@
 import jwt_decode from 'jwt-decode'
 
 export const postMethod = function (_email, _text, _number, _name) {
-    fetch('http://46.138.244.100:3000/api/main', {
+    fetch('http://localhost:5035/request', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         mode: 'cors',
-        body: JSON.stringify({ email: _email, text: _text, number: _number, name: _name })
+        body: JSON.stringify({ Email: _email, Description: _text, Phone: _number, Name: _name })
     })
     //.then(txt => txt.text().then(obj => console.log(obj)))
 }
