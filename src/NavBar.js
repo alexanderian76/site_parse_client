@@ -46,17 +46,21 @@ function NavBarComp() {
                 <Nav.Link active={location.pathname === '/'}  onClick={() => navigate(MAIN_ROUTE)} >Главная</Nav.Link>
                 <Nav.Link active={location.pathname === '/develop' || location.pathname === '/develop/'} onClick={() => navigate(DEVELOP_ROUTE)} >Разработка</Nav.Link>
                 {
-                  //  <Nav.Link active={location.pathname === '/about' || location.pathname === '/about/'} onClick={() => navigate(ABOUT_ROUTE)} >О нас</Nav.Link>
+                    <Nav.Link active={location.pathname === '/about' || location.pathname === '/about/'} onClick={() => navigate(ABOUT_ROUTE)} >О нас</Nav.Link>
                 }
-                <Nav.Link active={location.pathname === '/examples' || location.pathname === '/examples/'}  onClick={() => navigate(EXAMPLES_ROUTE)} >Примеры парсинга</Nav.Link>
-                {user.Auth ? <Nav.Link active={location.pathname === '/profile' || location.pathname === '/profile/'} onClick={() => navigate(PROFILE_ROUTE)} >Мои задачи</Nav.Link> : ""}
+                {
+                //    <Nav.Link active={location.pathname === '/examples' || location.pathname === '/examples/'}  onClick={() => navigate(EXAMPLES_ROUTE)} >Примеры парсинга</Nav.Link>
+                }
+                    {user.Auth ? <Nav.Link active={location.pathname === '/profile' || location.pathname === '/profile/'} onClick={() => navigate(PROFILE_ROUTE)} >Мои задачи</Nav.Link> : ""}
                 </Nav>
                 <Nav className="justify-content-end" style={{marginRight: 10}}>
                     <Navbar.Text>
                         <a style={{marginRight: 10, color: '#cccc'}}>Напишите нам: </a>
                         <ButtonMailto label="info@leaf-studio.ru" mailto="mailto:info@leaf-studio.ru"/>
                     </Navbar.Text>
-                    {!user.Auth ? <Nav.Link style={{color: "white", marginLeft: 15}} className="btn btn-success" onClick={() => navigate(LOGIN_ROUTE)}>Войти</Nav.Link> : ""}
+                    {
+                    //!user.Auth ? <Nav.Link style={{color: "white", marginLeft: 15}} className="btn btn-success" onClick={() => navigate(LOGIN_ROUTE)}>Войти</Nav.Link> : ""
+                }
                 </Nav>
                 
                 </Navbar.Collapse>

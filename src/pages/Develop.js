@@ -85,28 +85,31 @@ function DevelopComp() {
 
 
         <a style={{
-                     // width: currentWidth,
+                      
                       marginTop: typeof(currentWidth) === "string" ? 10 : 30,
                       display: 'inline-block',
-                      marginLeft: typeof(currentWidth) === "string" ? 10 : currentWidth / 10,
+                      marginLeft: typeof(currentWidth) === "string" ? 10 : currentWidth / 3,
+                      marginRight: typeof(currentWidth) === "string" ? 10 : currentWidth / 3,
                       fontSize: typeof(currentWidth) === "string" ? 17 : 19
                     }}>Если вам нужен сайт или web приложение для автоматизации бизнеса и ведения учета различного рода данных, то вы обратились по адресу. Создадим web приложение с учетом всех ваших требований. Если вам необходимо построить сложную логику или математическую модель для обработки данных, у нас работают лучшие математики, способные решить любую задачу.  Работаем как с юридическими, так и с физическими лицами. Цена каждого проекта индивидуальна и зависит от сложности и объема задач, но можем с уверенностью сказать, что предложим вам самые выгодные условия.</a>
         <a style={{
                      // width: currentWidth,
                       marginTop: typeof(currentWidth) === "string" ? 10 : 30,
                       display: 'inline-block',
-                      marginLeft: typeof(currentWidth) === "string" ? 10 : currentWidth / 10,
+                      marginLeft: typeof(currentWidth) === "string" ? 10 : currentWidth / 3,
+                      marginRight: typeof(currentWidth) === "string" ? 10 : currentWidth / 3,
                       fontSize: typeof(currentWidth) === "string" ? 17 : 19
                     }}>При разработке мы используем React. В серверной части, в зависимости от задач, используем либо Python, либо Node.js</a>
         <img src={devPic} style={{marginTop: 30, height: window.innerHeight < 400 ? 200 : window.innerHeight/3,width: '100%',  objectFit: 'contain'}}/>
                     <b style={{
                      // width: currentWidth,
                       display: 'inline-block',
-                      marginLeft: typeof(currentWidth) === "string" ? 10 : currentWidth / 10,
+                      marginLeft: typeof(currentWidth) === "string" ? 10 : currentWidth / 3,
+                      marginRight: typeof(currentWidth) === "string" ? 10 : currentWidth / 3,
                       fontSize: typeof(currentWidth) === "string" ? 17 : 19
                     }}>Что именно мы предлагаем:</b>
                     <ul style={{
-                      marginLeft:  typeof(currentWidth) === "string" ? 10 : currentWidth / 10,
+                      marginLeft:  typeof(currentWidth) === "string" ? 10 : currentWidth / 3,
                    //   fontFamily: ['Fira Sans', 'Tahoma', 'Geneva', 'sans-serif']
                    fontSize: typeof(currentWidth) === "string" ? 15 : 20
                       
@@ -124,11 +127,13 @@ function DevelopComp() {
                     <b style={{
                      // width: currentWidth,
                       display: 'inline-block',
-                      marginLeft: typeof(currentWidth) === "string" ? 10 : currentWidth / 10,
+                      marginLeft: typeof(currentWidth) === "string" ? 10 : currentWidth / 3,
+                      marginRight: typeof(currentWidth) === "string" ? 10 : currentWidth / 3,
                       fontSize: typeof(currentWidth) === "string" ? 17 : 19
                     }}>Для создания уникальных программных решений и эффективной организации долговременного плодотворного сотрудничества с нашими заказчиками мы:</b>
                     <ul style={{
-                      marginLeft:  typeof(currentWidth) === "string" ? 10 : currentWidth / 10,
+                      marginLeft:  typeof(currentWidth) === "string" ? 10 : currentWidth / 3,
+                      marginRight: typeof(currentWidth) === "string" ? 10 : currentWidth / 3,
                    //   fontFamily: ['Fira Sans', 'Tahoma', 'Geneva', 'sans-serif']
                    fontSize: typeof(currentWidth) === "string" ? 15 : 20
                       

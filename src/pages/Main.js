@@ -14,6 +14,7 @@ import techpic from '../assets/techpic.png'
 import { useForm } from "react-hook-form";
 import InputModal from "../modals/InputModal";
 import {postMethod} from '../utils/httpMethods'
+import { Link } from "react-router-dom";
 
 function MainComp(props) {
     const [selectedValue, setSelectedValue] = useState('')
@@ -56,7 +57,19 @@ function MainComp(props) {
    // console.log(errors);
 //<div style={{color: 'red'}}>{errors.Email?.type === 'pattern' && "Введите корректный e-mail"}</div>
     
-
+const ButtonMailto = ({ mailto, label }) => {
+    return (
+        <Link
+            to='#'
+            onClick={(e) => {
+                window.location.href = mailto;
+                e.preventDefault();
+            }}
+        >
+            {label}
+        </Link>
+    );
+};
   //  console.log(container.current.offsetHeight)
 //style={{backgroundImage: `url(${background})`, height: 1000}}
 //#86b7fe
@@ -121,7 +134,7 @@ function MainComp(props) {
                 textAlign: "center",
                 paddingTop: container.current.offsetHeight == null ? 0 : container.current.offsetHeight/ 50,
         }}>
-             { !state.showAlert ? <div>Свяжитесь с нами</div> :
+             { !state.showAlert ? <div>Для уточнения условий напишите нам: <ButtonMailto label="info@leaf-studio.ru" mailto="mailto:info@leaf-studio.ru"/></div> :
        <header style={{
         backgroundColor: "white",
         fontSize: 35,
@@ -135,6 +148,9 @@ function MainComp(props) {
        }
             
         </header>
+        {
+        
+        /*
         <form
         ref={formRef}
         style={{
@@ -173,8 +189,10 @@ function MainComp(props) {
             <textarea {...register('Comment', {required: false})} className="form-control" style={{height: nameRef.current.offsetHeight == null ? 0 : nameRef.current.offsetHeight * 5}}></textarea>
             <Button ref={btnRef} style={{marginTop: 10, marginLeft: nameRef.current.offsetWidth == null || btnRef.current.offsetWidth == null ? 0 : nameRef.current.offsetWidth - btnRef.current.offsetWidth}} variant="success" type="submit" className="btn btn-primary">Отправить</Button>
         </form>
-      
+        */
+      }
     </div>
+
   );
 }
 

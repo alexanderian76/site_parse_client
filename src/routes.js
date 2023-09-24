@@ -8,15 +8,15 @@ import ParseExamples from "./pages/ParseExamples";
 
 export const routes = [
     
-  /*  {
+    {
         route: ABOUT_ROUTE,
         Element: About
-    },*/
+    },
     {
         route: DEVELOP_ROUTE,
         Element: Develop
     },
-    {
+  /*  {
         route: LOGIN_ROUTE,
         Element: Auth 
     },
@@ -27,16 +27,16 @@ export const routes = [
     {
         route: EXAMPLES_ROUTE,
         Element: ParseExamples
-    }
+    }*/
 
 ]
 
 
 export const authRoutes = [
     
-    {
+  /*  {
         route: PROFILE_ROUTE,
         Element: Profile
     }
-
+*/
 ]
