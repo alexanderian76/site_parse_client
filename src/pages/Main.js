@@ -115,11 +115,11 @@ const ButtonMailto = ({ mailto, label }) => {
         </header>
         <a style={{
                      // width: currentWidth,
-                      marginTop: state.winWidth < 900 ? 10 : 30,
+                      marginTop: state.winWidth < 1800 ? 10 : 30,
                       display: 'inline-block',
-                      marginLeft: state.winWidth < 900 ? 10 : state.winWidth / 10,
-                      marginRight: state.winWidth < 900 ? 10 : state.winWidth / 10,
-                      fontSize: state.winWidth < 900 ? 17 : 19
+                      marginLeft: state.winWidth < 1800 ? 10 : state.winWidth / 4,
+                      marginRight: state.winWidth < 1800 ? 10 : state.winWidth / 4,
+                      fontSize: state.winWidth < 1800 ? 17 : 19
                     }}>
                         Мы предлагаем услуги по разработке программного обеспечения для бизнеса, парсингу данных (при наличии к ним общего доступа).
                         <div> 
@@ -148,6 +148,7 @@ const ButtonMailto = ({ mailto, label }) => {
        }
             
         </header>
+        
         {
         
         /*

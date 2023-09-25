@@ -13,11 +13,11 @@ function DevelopComp() {
   
 
   const [state, setState] = useState({winWidth: window.innerWidth})
-  const [currentWidth, setCurrentWidth] = useState(window.innerWidth < 900 ? '100%' : 900) 
+  const [currentWidth, setCurrentWidth] = useState(window.innerWidth < 1800 ? '100%' : 1800) 
   function onResize() {
     // console.log(winWidth)
        setState({winWidth: window.innerWidth})
-       setCurrentWidth(window.innerWidth < 900 ? '100%' : 900)
+       setCurrentWidth(window.innerWidth < 1800 ? '100%' : 1800)
   }
 
   useEffect(() => {
@@ -125,8 +125,9 @@ function DevelopComp() {
                       </li>
                     </ul>
                     <b style={{
-                     // width: currentWidth,
+                      
                       display: 'inline-block',
+                      
                       marginLeft: typeof(currentWidth) === "string" ? 10 : currentWidth / 3,
                       marginRight: typeof(currentWidth) === "string" ? 10 : currentWidth / 3,
                       fontSize: typeof(currentWidth) === "string" ? 17 : 19
