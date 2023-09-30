@@ -51,7 +51,9 @@ function NavBarComp() {
                 {
                 //    <Nav.Link active={location.pathname === '/examples' || location.pathname === '/examples/'}  onClick={() => navigate(EXAMPLES_ROUTE)} >Примеры парсинга</Nav.Link>
                 }
-                    {user.Auth ? <Nav.Link active={location.pathname === '/profile' || location.pathname === '/profile/'} onClick={() => navigate(PROFILE_ROUTE)} >Мои задачи</Nav.Link> : ""}
+                    {
+                    //user.Auth ? <Nav.Link active={location.pathname === '/profile' || location.pathname === '/profile/'} onClick={() => navigate(PROFILE_ROUTE)} >Мои задачи</Nav.Link> : ""
+                }
                 </Nav>
                 <Nav className="justify-content-end" style={{marginRight: 10}}>
                     <Navbar.Text>

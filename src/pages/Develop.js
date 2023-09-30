@@ -111,8 +111,8 @@ function DevelopComp() {
                     <ul style={{
                       marginLeft:  typeof(currentWidth) === "string" ? 10 : currentWidth / 3,
                    //   fontFamily: ['Fira Sans', 'Tahoma', 'Geneva', 'sans-serif']
-                   fontSize: typeof(currentWidth) === "string" ? 15 : 20
-                      
+                   fontSize: typeof(currentWidth) === "string" ? 15 : 20,
+                      maxWidth: currentWidth / 3
                     }}>
                       <li>
                       разработка программного обеспечения для автоматизации специфических бизнес-процессов для малых и средних компаний;
