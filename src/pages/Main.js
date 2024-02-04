@@ -89,9 +89,11 @@ const ButtonMailto = ({ mailto, label }) => {
                 paddingTop: container.current.offsetHeight == null ? 0 : container.current.offsetHeight/ 30,
             //  paddingBottom: container.current.offsetHeight == null ? 0 : container.current.offsetHeight/ 12
         }}>
-            <div>Аутсорс разработка и парсинг данных</div>
+            <div>Аутсорсинговая разработка приложений для любых платформ</div>
             Создадим или доработаем уже существующие приложения
-            <div>Парсим данные в любом удобном для вас формате</div>
+           <div>{
+           //Парсим данные в любом удобном для вас формате
+           }</div>
             <img alt="Парсинг, аутсорс разработка" src={handpic} style={{marginTop: 30, height: window.innerHeight/3 < 400 ? 400 : window.innerHeight/3,width: '100%',  objectFit: 'contain'}}/>
         </header>
         <meta name="description" content="создать web-приложение, спарсить данныые"/>
@@ -121,7 +123,7 @@ const ButtonMailto = ({ mailto, label }) => {
                       marginRight: state.winWidth < 1800 ? 10 : state.winWidth / 4,
                       fontSize: state.winWidth < 1800 ? 17 : 19
                     }}>
-                        Мы предлагаем услуги по разработке программного обеспечения для бизнеса, парсингу данных (при наличии к ним общего доступа).
+                        Мы предлагаем услуги по разработке программного обеспечения для бизнеса.
                         <div> 
                             Автоматизируем бизнес процессы, обучаем сотрудников использовать системы, а также проводим тренинги по компьютерной безопасности, что позволит вам избежать кражи конфеденциальной информации с рабочих устройств.
                         </div>

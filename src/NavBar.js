@@ -38,15 +38,15 @@ function NavBarComp() {
     return(
         <Navbar ref={ref => {height.current = ref;}} fixed="top" expand='md' bg="dark" variant="dark">
             <div style={{marginLeft: '20%', display: 'flex', width: '100%'}}>
-                <Navbar.Brand onClick={() => navigate(MAIN_ROUTE)}>
+                <Navbar.Brand style={{padding: 10}} onClick={() => navigate(MAIN_ROUTE)}>
                 <img src={leafLogo} width="25" height="25" alt="Leaf logo"/></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
-                <Nav.Link active={location.pathname === '/'}  onClick={() => navigate(MAIN_ROUTE)} >Главная</Nav.Link>
-                <Nav.Link active={location.pathname === '/develop' || location.pathname === '/develop/'} onClick={() => navigate(DEVELOP_ROUTE)} >Разработка</Nav.Link>
+                <Nav.Link style={{padding: 10}} active={location.pathname === '/'}  onClick={() => navigate(MAIN_ROUTE)} >Главная</Nav.Link>
+                <Nav.Link style={{padding: 10}} active={location.pathname === '/develop' || location.pathname === '/develop/'} onClick={() => navigate(DEVELOP_ROUTE)} >Разработка</Nav.Link>
                 {
-                    <Nav.Link active={location.pathname === '/about' || location.pathname === '/about/'} onClick={() => navigate(ABOUT_ROUTE)} >О нас</Nav.Link>
+                    <Nav.Link style={{padding: 10}} active={location.pathname === '/about' || location.pathname === '/about/'} onClick={() => navigate(ABOUT_ROUTE)} >О нас</Nav.Link>
                 }
                 {
                 //    <Nav.Link active={location.pathname === '/examples' || location.pathname === '/examples/'}  onClick={() => navigate(EXAMPLES_ROUTE)} >Примеры парсинга</Nav.Link>
@@ -55,7 +55,7 @@ function NavBarComp() {
                     //user.Auth ? <Nav.Link active={location.pathname === '/profile' || location.pathname === '/profile/'} onClick={() => navigate(PROFILE_ROUTE)} >Мои задачи</Nav.Link> : ""
                 }
                 </Nav>
-                <Nav className="justify-content-end" style={{marginRight: 10}}>
+                <Nav className="justify-content-end" style={{marginRight: 10, padding: 10}}>
                     <Navbar.Text>
                         <a style={{marginRight: 10, color: '#cccc'}}>Напишите нам: </a>
                         <ButtonMailto label="info@leaf-studio.ru" mailto="mailto:info@leaf-studio.ru"/>
