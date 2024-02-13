@@ -60,7 +60,7 @@ function DevelopComp() {
             //  paddingBottom: container.current.offsetHeight == null ? 0 : container.current.offsetHeight/ 12
         }}>
 <div>Разработаем web-приложение для любых нужд</div>
-            От самых простых до полноценных web-сервисов
+            От простых сайтов до полноценных CRM систем
             <img alt="разработка приложения" src={handpic} style={{marginTop: 30, height: window.innerHeight/3 < 400 ? 400 : window.innerHeight/3,width: '100%',  objectFit: 'contain'}}/>
         </header>
         <meta name="description" content="купить web-приложение"/>

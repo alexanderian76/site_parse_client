@@ -38,9 +38,10 @@ function NavBarComp() {
     return(
         <Navbar ref={ref => {height.current = ref;}} fixed="top" expand='md' bg="dark" variant="dark">
             <div style={{marginLeft: '20%', display: 'flex', width: '100%'}}>
+            <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                 <Navbar.Brand style={{padding: 10}} onClick={() => navigate(MAIN_ROUTE)}>
                 <img src={leafLogo} width="25" height="25" alt="Leaf logo"/></Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+                
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
                 <Nav.Link style={{padding: 10}} active={location.pathname === '/'}  onClick={() => navigate(MAIN_ROUTE)} >Главная</Nav.Link>
